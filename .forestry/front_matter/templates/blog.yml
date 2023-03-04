@@ -1,0 +1,39 @@
+---
+label: สร้าง blog
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+  config:
+    required: true
+- type: text
+  name: description
+  label: description
+  config:
+    required: true
+- type: text
+  name: author
+  label: author
+  default: ak1103dev
+- type: datetime
+  name: pubDatetime
+  label: pubDatetime
+  default: now
+- type: text
+  name: postSlug
+  label: postSlug
+- type: boolean
+  name: featured
+  label: featured
+- type: boolean
+  name: draft
+  label: draft
+- type: list
+  name: tags
+  label: tags
+- type: file
+  name: ogImage
+  label: ogImage
+pages:
+- src/content/blog/forestry-cms-blog.md
