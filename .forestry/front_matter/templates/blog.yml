@@ -8,6 +8,11 @@ fields:
   config:
     required: true
 - type: text
+  name: description
+  label: description
+  config:
+    required: true
+- type: text
   name: author
   label: author
   default: ak1103dev
@@ -30,10 +35,5 @@ fields:
 - type: file
   name: ogImage
   label: ogImage
-- type: text
-  name: description
-  label: description
-  config:
-    required: true
 pages:
 - src/content/blog/forestry-cms-blog.md
