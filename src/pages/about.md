@@ -3,34 +3,61 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
-
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
-
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+I am a software developer, a blogger, and an investor. I want to change the world, but I know that change starts with me. Therefore, I have made a conscious decision to work on improving myself first. Through my skills as a developer, my experiences as a blogger, and my investments, I hope to inspire positive change in the world. Join me on this journey of self-improvement and global impact.
 
 <div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
+  <img src="/assets/dev.jpeg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
 </div>
 
-## Tech Stack
+## Technical Skills
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+- Javascript / Typescript
+- HTML / CSS
+- Unix Scripting
+- Git
+- Docker
+- Vim
 
-## Features
+## Language Skills
 
-Here are certain features of this site.
+- Thai (Native)
+- English (Intermediate)
+- Chinese (A Little Bit)
 
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
+## Software Development Experiences
 
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+### Head of Product, Witsawa Corporation
+
+Sep 2021 - Present
+
+- Setup code structure and make boilerplate
+- Deploy mobile application to Play Store and App Store
+- Manage web service with Rancher or Kubernetes
+- Solve hard problem
+- Make solution for supporting user requirement
+
+### Tech Lead, Witsawa Corporation
+
+Sep 2019 - Sep 2021
+
+- Lead team and manage Kanban board
+- Develop web application with React, rematch
+- Develop mobile application with React Native
+- Develop React Native Expo TypeScript Boilerplate
+- Develop API with Loopback (Node.js framework)
+- Develop API with NestJS (Node.js framework)
+- Deploy mobile application to Play Store and App Store
+- Manage web service with Rancher or Kubernetes
+
+### Senior Software Developer, Witsawa Corporation
+
+Sep 2017 - Sep 2019
+
+- Develop web application with Vue.js + firebase
+- Develop web application with React, Redux, Redux-Saga
+
+## Investment Experiences
+
+- Private Funds
+- Mutual Funds
+- Crypto Currencies
