@@ -5,12 +5,16 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - type: text
   name: author
   label: author
+  default: ak1103dev
 - type: datetime
   name: pubDatetime
   label: pubDatetime
+  default: now
 - type: text
   name: postSlug
   label: postSlug
@@ -29,3 +33,5 @@ fields:
 - type: text
   name: description
   label: description
+  config:
+    required: true
