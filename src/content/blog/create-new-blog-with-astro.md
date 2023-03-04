@@ -8,7 +8,7 @@ draft: false
 tags:
   - astro
   - blogs
-ogImage: "create-new-blog-with-astro.png"
+ogImage: "images/create-new-blog-with-astro.jpg"
 description: สร้าง Blog ใหม่ด้วย Astro
 ---
 
