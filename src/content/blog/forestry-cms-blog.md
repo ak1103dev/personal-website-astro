@@ -9,7 +9,7 @@ tags:
 - headless-cms
 - forestry
 ogImage: ''
-description: ใช้ forestry cms ทำให้เขียน blog ได้ง่ายขึ้น
+description: จริงๆ ก่อนหน้านี้ ก็มีลอง headless CMS ตัวอื่นอยู่ แต่พอลอ
 
 ---
 จริงๆ ก่อนหน้านี้ ก็มีลอง headless CMS ตัวอื่นอยู่ แต่พอลอง ไล่อ่าน post ของ AstroPaper ดูว่ามีอะไรให้ set บ้าง ก็ไปเจอว่ามันมี forestry ให้สามารถทำ headless CMS ได้ ก็เลยลอง setup ตาม link นี้  
