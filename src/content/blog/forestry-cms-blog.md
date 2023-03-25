@@ -8,7 +8,7 @@ draft: false
 tags:
 - headless-cms
 - forestry
-ogImage: ''
+ogImage: "/uploads/forestry-pos-full.png"
 description: จริงๆ ก่อนหน้านี้ ก็มีลอง headless CMS ตัวอื่นอยู่ แต่พอลอ
 
 ---
