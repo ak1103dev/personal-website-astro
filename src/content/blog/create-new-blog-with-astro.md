@@ -8,7 +8,7 @@ draft: false
 tags:
 - astro
 - blogs
-ogImage: create-new-blog-with-astro.png
+ogImage: "/images/create-new-blog-with-astro.jpg"
 description: ช่วงนี้ได้ยินว่า Astro กำลังมา มีคนเอาทำ blog
 
 ---
