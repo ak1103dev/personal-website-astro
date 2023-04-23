@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "tinacms dev -c \"astro dev\"",
     "start": "tinacms dev -c \"astro dev\"",
-    "build": "astro build",
+    "build": "tinacms build && astro build",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
@@ -38,6 +38,7 @@
     "astro-eslint-parser": "^0.11.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "env-cmd": "^10.1.0",
     "eslint": "^8.33.0",
     "eslint-plugin-astro": "^0.23.0",
     "husky": "^8.0.3",
