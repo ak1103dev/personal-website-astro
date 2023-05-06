@@ -5,7 +5,7 @@ author: ak1103dev
 pubDatetime: 2023-04-30T17:00:00.000Z
 postSlug: จะเริ่มต้นเขียนเว็บยังไงดีนะ
 featured: true
-draft: true
+draft: false
 tags:
   - javascript
   - css
@@ -24,19 +24,124 @@ tags:
 
 มาดูตัวอย่างการเขียนเว็บแบบง่ายๆ
 
+1. เริ่มจาก เขียน html ก่อนนะครับ
+
 ```html
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Example Web</title>
 </head>
 
 <body>
   <h1>นาฬิกาจับเวลา</h1>
-  <h4>00:00</h4>
+  <h2>00:00</h2>
+  <button>เริ่มจับเวลา</button>
 </body>
+
 </html>
 ```
+
+![](<https://assets.tina.io/2587cc3d-aa2c-4fa6-bb82-c5dd0474418a/Screenshot 2566-05-06 at 21.26.26.png>)
+
+2\. เพิ่ม style ให้ ปุ่มสักหน่อย ให้ดูสวยขึ้น
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Example Web</title>
+  <!-- เพิ่ม style tag -->
+  <style>
+    .btn-start {
+      background-color: lime;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>นาฬิกาจับเวลา</h1>
+  <h2>00:00</h2>
+  <button class="btn-start">เริ่มจับเวลา</button> <!-- เพิ่ม class btn-start -->
+</body>
+
+</html>
+```
+
+![](<https://assets.tina.io/2587cc3d-aa2c-4fa6-bb82-c5dd0474418a/Screenshot 2566-05-06 at 21.31.29.png>)
+
+3\. จากนั้นก็เพิ่ม function onClick ไว้สั่งเริ่ม สั่งหยุด
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Example Web</title>
+  <style>
+    .btn-start {
+      background-color: lime;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>นาฬิกาจับเวลา</h1>
+  <h2>00:00</h2>
+  <!-- เพิ่ม onclick -->
+  <button class="btn-start" onclick="onClick()">เริ่มจับเวลา</button> 
+
+  <script>
+    let time = 0
+    let isStart = false
+    let interval
+
+    const onClick = () => {
+      if (isStart) {
+        stop()
+      } else {
+        start()
+      }
+    }
+
+    const start = () => {
+      isStart = true
+      interval = setInterval(() => {
+        time = time + 1
+        const element = document.getElementById('time')
+        const h = Math.floor(time / 60).toString().padStart(2, '0')
+        const m = (time % 60).toString().padStart(2, '0')
+        element.innerHTML = `${h}:${m}`
+      }, 1000)
+    }
+
+    const stop = () => {
+      clearInterval(interval)
+      isStart = false
+    }
+  </script>
+</body>
+
+</html>
+```
+
+![](<https://assets.tina.io/2587cc3d-aa2c-4fa6-bb82-c5dd0474418a/Screenshot 2566-05-06 at 21.56.10.png>)
+
+เอาคร่าวประมาณนี้ก่อนละกันครับ
+
+สามารถดูเพิ่มเติมได้จาก [https://codepen.io/ak1103dev/pen/GRYQKxL](https://codepen.io/ak1103dev/pen/GRYQKxL)
+
+อันนี้เป็นตัวอย่างแบบง่ายๆ นะครับ จริงๆ เว็บสามารถทำได้อีกหลายอย่างเลยครับ ตามที่เคยเห็นในเว็บต่างๆ ที่เราเคยเข้ากัน
+
+ก็ลองสร้างเว็บที่เราอยากทำง่ายๆ ดูก่อน เช่น จับเวลา, คำนวนเกรดเฉลี่ย, เครื่องคิดเลข, ปฏิทิน แล้วแต่เครื่องมือที่เราต้องการอะนะ
+
+ขอจบเท่านี้ก่อนละกันครับ
 
 #### อ้างอิง
 
