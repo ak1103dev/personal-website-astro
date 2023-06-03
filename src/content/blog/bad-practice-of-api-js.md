@@ -127,4 +127,4 @@ null === null // true
 คือ ไม่ว่าจะ code ภาษาอะไรก็ตาม ถ้าเรามีการแยก Environment เช่น production, staging, development, local\
 แล้วมีพวก key , url บางอย่างไม่เหมือนกัน ควรจะแยกไว้ file หนึ่ง เก็บค่าเหล่านี้ เพื่อ read ค่าตามแต่ละ env กำหนด
 
-ก็จะมี library ช่วยจัดการอยู่ เช่น dotenv, config, [env-cmd](https://www.npmjs.com/package/env-cmd "env-cmd")
+ก็จะมี library ช่วยจัดการอยู่ เช่น dotenv, [config](https://www.npmjs.com/package/config "config"), [env-cmd](https://www.npmjs.com/package/env-cmd "env-cmd")
