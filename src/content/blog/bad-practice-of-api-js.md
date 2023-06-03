@@ -95,3 +95,36 @@ const getSomeData = async () => {
   }
 }
 ```
+
+3.ใช้ == ในการเปรียบเทียบค่า
+
+ในภาษาอื่นไม่ได้แปลกอะไร แต่ในภาษา JavaScript เนี่ย มันจะมี 2 แบบ คือ == กับ ===\
+\== มันจะ true ก็ต่อเมื่อ ค่าของทั้งสองเท่ากันโดยไม่สน data type\
+\=== มันจะ true ก็ต่อเมื่อ ค่าของทั้งสองเท่ากัน และ data type ต้องเหมือนกัน\
+เขาจึงแนะนำให้ check ด้วย === มากกว่า เพื่อความปลอดภัยของข้อมูล\
+
+
+```javascript
+1 == '1' // true
+1 === '1' // false
+1 === 1 // true
+
+undefined == null // true
+undefined === null // false
+undefined === undefined // true
+null === null // true
+
+```
+
+4.ไม่ใช้ ORM ในการจัดการ database\
+\
+คือถ้าเป็นสมัยก่อนก็คงสร้าง database โดยการ click จาก dashboard แล้วก็เขียน sql ใน code ในการ query ต่างๆ แต่ปัจจุบันเรามี library ที่สร้าง schema, releation, แล้วก็ function พื้นฐานพวก insert, update, getData ในการจัดการข้อมูลใน database และก็มี function จัดการ migration database ให้ด้วย มันจะจัดการง่ายกว่า และผิดพลาดน้อยกว่า เวลาเขียนเป็น function ที่โยน json เข้าไป แทนที่จะเขียนเป็น sql string ที่พิมพ์ตกไปตัวหนึ่ง ก็ทำ code พังได้\
+\
+ตัวอย่าง ORM ที่ใช้กันในปัจจุบันดังๆ ก็ TypeORM, Sequelize, Prisma ดูต่อได้ใน [https://www.prisma.io/dataguide/database-tools/top-nodejs-orms-query-builders-and-database-libraries](https://www.prisma.io/dataguide/database-tools/top-nodejs-orms-query-builders-and-database-libraries)
+
+5.เขียน hardcode พวกค่าต่างๆ ที่แต่ละ Environment ใช้ไม่เหมือนกัน
+
+คือ ไม่ว่าจะ code ภาษาอะไรก็ตาม ถ้าเรามีการแยก Environment เช่น production, staging, development, local\
+แล้วมีพวก key , url บางอย่างไม่เหมือนกัน ควรจะแยกไว้ file หนึ่ง เก็บค่าเหล่านี้ เพื่อ read ค่าตามแต่ละ env กำหนด
+
+ก็จะมี library ช่วยจัดการอยู่ เช่น dotenv, config, [env-cmd](https://www.npmjs.com/package/env-cmd "env-cmd")
