@@ -131,7 +131,9 @@ null === null // true
 \
 6.เขียน routes ทั้งหมดไว้ file เดียวกัน
 
-คือ express มันสามารถทำ group routes ได้ เช่น
+คือ พอเขียนไว้ใน file เดียวกัน ถ้า routes ไม่เยอะ ok เลยไม่มีปัญหา แต่ถ้ามี routes เยอะๆ เราควรจะแบ่งกลุ่มให้มัน เพื่อให้ใน file หนึ่งไม่มี code ยาวจนเกินไป
+
+express มันสามารถทำ group routes ได้ เช่น
 
 ```javascript
 // app.js
