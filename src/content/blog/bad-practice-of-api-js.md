@@ -7,7 +7,7 @@ author: ak1103dev
 pubDatetime: 2023-06-02T17:00:00.000Z
 postSlug: Bad Practice ในการพัฒนา API ด้วยภาษา JavaScript
 featured: true
-draft: true
+draft: false
 tags:
   - JavaScript
 ---
@@ -127,4 +127,52 @@ null === null // true
 คือ ไม่ว่าจะ code ภาษาอะไรก็ตาม ถ้าเรามีการแยก Environment เช่น production, staging, development, local\
 แล้วมีพวก key , url บางอย่างไม่เหมือนกัน ควรจะแยกไว้ file หนึ่ง เก็บค่าเหล่านี้ เพื่อ read ค่าตามแต่ละ env กำหนด
 
-ก็จะมี library ช่วยจัดการอยู่ เช่น [dotenv](https://www.npmjs.com/package/dotenv "Dotenv"), [config](https://www.npmjs.com/package/config "config"), [env-cmd](https://www.npmjs.com/package/env-cmd "env-cmd")
+ก็จะมี library ช่วยจัดการอยู่ เช่น [dotenv](https://www.npmjs.com/package/dotenv "Dotenv"), [config](https://www.npmjs.com/package/config "config"), [env-cmd](https://www.npmjs.com/package/env-cmd "env-cmd")\
+\
+6.เขียน routes ทั้งหมดไว้ file เดียวกัน
+
+คือ express มันสามารถทำ group routes ได้ เช่น
+
+```javascript
+// app.js
+const express = require('express')
+const routes = require('./routes')
+
+const app = express()
+
+app.use('/', routes)
+
+
+// routes.js
+const express = require('express')
+const router = express.Router()
+const userRoutes = require('./userRoutes')
+
+router.use('/users', userRoutes)
+
+module.exports = router
+
+// userRoutes.js
+const express = require('express')
+const router = express.Router()
+
+router.get('/', () => {
+  // get user
+})
+router.post('/login', () => {
+  // user login
+})
+
+module.exports = router
+```
+
+7.ถ้า update version library ได้ควร update\
+คือ เวลามี node version ใหม่ออกมา มันจะเปลี่ยน architecture ข้างในค่อนข้างเยอะ (major change นะ) เช่นจาก node 12 เป็น node 14 ทีนี้มันมีบาง library มันพัง เราจึงต้อง update library ให้ version มัน compatible กับ node version ที่เราใช้ด้วย\
+แล้วก็เพื่อ fix issue, fix bug, fix security ไปด้วยในตัว\
+\
+\
+ก็ถ้าใครเห็น code ลักษณะทั้ง 7 ข้อก็อย่าเอาเป็นเยี่ยงอย่างนะครับ
+
+code เราเขียนให้คนอ่านด้วยนะครับ ไม่ได้เขียนให้ computer อ่านอย่างเดียว
+
+> ขอบคุณครับ ขอให้มีความสุขในการเขียนโค้ด
