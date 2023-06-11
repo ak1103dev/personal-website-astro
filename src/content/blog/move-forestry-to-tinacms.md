@@ -4,7 +4,7 @@ description: พอดีวันศุกร์ ผมได้รับ email
 author: ak1103dev
 pubDatetime: 2023-04-22T17:00:00.000Z
 postSlug: move-forestry-to-tinacms
-featured: true
+featured: false
 tags:
   - headless-cms
   - tinacms
