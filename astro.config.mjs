@@ -10,7 +10,7 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://ak1103.dev/",
+  site: "https://ak1103dev.com/",
   integrations: [tailwind({
     config: {
       applyBaseStyles: false
