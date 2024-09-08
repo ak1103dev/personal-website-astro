@@ -6,6 +6,9 @@ pubDatetime: 2024-08-23T17:00:00.000Z
 postSlug: what_is_problem
 featured: true
 draft: false
+tags:
+  - ปัญหา
+  - problem
 ---
 
 เรามานิยามคำว่า "ปัญหา" กันหน่อย
