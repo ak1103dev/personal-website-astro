@@ -11,7 +11,7 @@ export type SearchItem = {
 };
 
 interface Props {
-  searchList: Readonly<SearchItem[]>;
+  searchList: SearchItem[];
 }
 
 interface SearchResult {
@@ -19,7 +19,7 @@ interface SearchResult {
   refIndex: number;
 }
 
-export default function SearchBar({ searchList }: Props) {
+export default function SearchBar({ searchList }: Readonly<Props>) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [inputVal, setInputVal] = useState("");
   const [searchResults, setSearchResults] = useState<SearchResult[] | null>(
