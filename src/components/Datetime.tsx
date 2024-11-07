@@ -1,7 +1,7 @@
 export interface Props {
-  datetime: string | Date;
-  size?: "sm" | "lg";
-  className?: string;
+  datetime: Readonly<string | Date>;
+  size?: Readonly<"sm" | "lg">;
+  className?: Readonly<string>;
 }
 
 export default function Datetime({ datetime, size = "sm", className }: Props) {

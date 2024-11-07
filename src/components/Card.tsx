@@ -2,9 +2,9 @@ import Datetime from "./Datetime";
 import type { BlogFrontmatter } from "@content/_schemas";
 
 export interface Props {
-  href?: string;
-  frontmatter: BlogFrontmatter;
-  secHeading?: boolean;
+  href?: Readonly<string>;
+  frontmatter: Readonly<BlogFrontmatter>;
+  secHeading?: Readonly<boolean>;
 }
 
 export default function Card({ href, frontmatter, secHeading = true }: Props) {
