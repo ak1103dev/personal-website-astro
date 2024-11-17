@@ -7,6 +7,7 @@ description: >-
 author: ak1103dev
 pubDatetime: 2023-06-24T17:00:00.000Z
 postSlug: postgresql-array-operators
+featured: false
 draft: true
 tags:
   - PostgreSQL
